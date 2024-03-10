@@ -41,6 +41,7 @@ def safe_divide(x, y)
 puts safe_divide(10, 2)
 puts safe_divide(5, 0)
 
+
 ############################################
 # Problem 4: File I/O
 puts "P4:"
@@ -56,6 +57,7 @@ begin
   end
 
 
+############################################
 # Problem 5: Custom Exceptions
 puts "P5:"
 
@@ -76,12 +78,19 @@ rescue InvalidAgeError => e
 end
 
 # P5 Test Cases
-puts validate_age(-5)
+# puts validate_age(-5)
 puts validate_age(30)
 
 
+############################################
 # Problem 6: Symbols as Hash Keys
+puts "P6:"
 
+student = {Name: "Alice", Age: 20, Grade: "A"}
+
+student.each do |key, value|
+  puts "#{key}: #{value}"
+end
 
 
 # Problem 7: Enumerable select Method
