@@ -14,6 +14,7 @@ puts tag :h1, "This is a header"
 ############################################
 # Problem 2: Blocks and Iteration
 puts "P2:"
+
 numbers = [1, 2, 3, 4, 5]
 
 numbers.each do |number|
@@ -23,8 +24,22 @@ end
 triple = Proc.new {|x|x*3}
 puts numbers.map(&triple)
 
+############################################
 # Problem 3: Exception Handling
+puts "P3:"
 
+def safe_divide(x, y)
+    begin
+        x / y
+    end 
+
+    rescue ZeroDivisionError => e
+        puts "Division by zero error: #{e.message}"
+    end
+
+# P3 Test Cases
+puts safe_divide(10, 2)
+puts safe_divide(5, 0)
 
 
 # Problem 4: File I/O
