@@ -180,8 +180,21 @@ str_lengths = words.map { |word| word.length }
 puts str_lengths
 
 
-
+############################################
 # Problem 15: Handling ZeroDivisionError
+puts "P15:"
 
+def divide_numbers(dividend, divisor)
+    begin
+      result = dividend / divisor
+      return result
+    rescue ZeroDivisionError
+      puts "Cannot divide by zero!"
+    end
+  end
+  
+  # P15 Test Cases
+  puts divide_numbers(10, 2)
+  puts divide_numbers(10, 0)
 
 
