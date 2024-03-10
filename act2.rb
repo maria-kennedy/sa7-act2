@@ -92,9 +92,13 @@ student.each do |key, value|
   puts "#{key}: #{value}"
 end
 
-
+############################################
 # Problem 7: Enumerable select Method
+puts "P7:"
 
+numbers = [1, 2, 3, 4, 5, 6]
+even_numbers = numbers.select { |number| number.even? }
+puts even_numbers
 
 
 # Problem 8: The unless Keyword
