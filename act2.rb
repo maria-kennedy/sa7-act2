@@ -115,10 +115,21 @@ end
 warn_unless(false, "This is a warning.")
 
 
-
+############################################
 # Problem 9: Global Variables
+puts "P9:"
 
-
+def check_status
+    puts $app_status
+  end
+  
+  # First check of global var
+  $app_status = "OK"
+  check_status
+  
+  # Changing status, and checking again
+  $app_status = "Error"
+  check_status
 
 # Problem 10: Iterating with times
 
