@@ -131,23 +131,53 @@ def check_status
   $app_status = "Error"
   check_status
 
+############################################
 # Problem 10: Iterating with times
+puts "P10:"
 
+5.times do
+    puts "Ruby is fun!"
+  end
 
-
+############################################
 # Problem 11: Ranges and Loops
+puts "P11:"
 
+(1..5).each do |num|
+    puts num
+  end
 
-
+############################################
 # Problem 12: Reading Specific Lines from a File
+# used online sources to help with parts of this one, couldn't figure out from notes alone
+puts "P12:"
 
 
+File.open('sample.txt') do |file|
+    file.each_with_index do |line, index| 
+        break if index >= 3                 # Stopping after 3 lines
+        puts "#{index + 1}: #{line}"
+    end
+end
 
+
+############################################
 # Problem 13: Command-line Arguments
+puts "P13:(uses command line, so no output)"
+
+# greet.rb
+ARGV.each do |name|
+    puts "Hello, #{name}!"
+  end
 
 
-
+############################################
 # Problem 14: Using map with a Block
+puts "P14:" 
+
+words = ["Ruby", "is", "awesome"]
+str_lengths = words.map { |word| word.length }
+puts str_lengths
 
 
 
