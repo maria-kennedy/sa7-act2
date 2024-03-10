@@ -101,7 +101,18 @@ even_numbers = numbers.select { |number| number.even? }
 puts even_numbers
 
 
+############################################
 # Problem 8: The unless Keyword
+puts "P8:"
+
+def warn_unless(condition, message)
+    unless condition
+      puts message
+    end
+end
+
+# warn_unless(true, "This is a warning.")
+warn_unless(false, "This is a warning.")
 
 
 
