@@ -1,5 +1,6 @@
 ############################################
 # Problem 1: Method Calls Without Parentheses
+puts "P1:"
 
 def tag(html_tag, content)
   "<#{html_tag}>#{content}</#{html_tag}>"
@@ -10,9 +11,17 @@ puts tag :p, "This is a paragraph"
 puts tag :h1, "This is a header"
 
 
-
+############################################
 # Problem 2: Blocks and Iteration
+puts "P2:"
+numbers = [1, 2, 3, 4, 5]
 
+numbers.each do |number|
+    puts number * 2
+end
+
+triple = Proc.new {|x|x*3}
+puts numbers.map(&triple)
 
 # Problem 3: Exception Handling
 
