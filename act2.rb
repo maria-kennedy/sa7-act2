@@ -57,7 +57,27 @@ begin
 
 
 # Problem 5: Custom Exceptions
+puts "P5:"
 
+class InvalidAgeError < StandardError; end
+
+def validate_age(age)
+  if age.negative?
+    raise InvalidAgeError, "Invalid age: #{age}"
+  else
+    puts "Age is valid"
+  end
+end
+
+begin
+  validate_age(-1)
+rescue InvalidAgeError => e
+  puts e.message
+end
+
+# P5 Test Cases
+puts validate_age(-5)
+puts validate_age(30)
 
 
 # Problem 6: Symbols as Hash Keys
