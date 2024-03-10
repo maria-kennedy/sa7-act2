@@ -41,9 +41,19 @@ def safe_divide(x, y)
 puts safe_divide(10, 2)
 puts safe_divide(5, 0)
 
-
+############################################
 # Problem 4: File I/O
+puts "P4:"
 
+begin
+    content = File.read("input.txt")  
+    rev = content.reverse
+    File.open("output.txt", "w") do |file| 
+      file.write(rev)
+    end
+  rescue Errno::ENOENT => e        
+    puts "Error: #{e.message}"
+  end
 
 
 # Problem 5: Custom Exceptions
